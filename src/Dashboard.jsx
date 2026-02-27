@@ -80,7 +80,7 @@ const Index = () => {
                    
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-30 lg:mt-4 items-start ">
                         
-                        <div className="lg:col-span-5 relative -top-[90px] h-[310px] gap-4">
+                        <div className="lg:col-span-4 relative -top-[90px] h-[310px] gap-4">
                             <TeamCollaboration users={data?.users} />
                         </div>
 
