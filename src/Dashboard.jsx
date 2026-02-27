@@ -61,7 +61,7 @@ const Index = () => {
                    </div>
 
 
-                    <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-4 items-start">
+                    <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mt-4 items-start">
                         <div className="lg:col-span-2 h-[230px] ">
                             <ProjectAnalytics
                                 analytics={data?.analytics}
@@ -78,14 +78,14 @@ const Index = () => {
                         </div>
                     </div>
                    
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-6 items-start">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-6 items-start">
                         
-                        <div className="lg:col-span-4 relative -top-[90px] h-[310px]">
+                        <div className="lg:col-span-4 relative -top-[90px] h-[310px] gap-4">
                             <TeamCollaboration users={data?.users} />
                         </div>
 
                        
-                        <div className="lg:col-span-5 relative -top-[90px] h-[310px]">
+                        <div className="lg:col-span-5 relative -top-[90px] h-[310px] gap-4">
                             <ProjectProgress analytics={data?.analytics} />
                         </div>
 
