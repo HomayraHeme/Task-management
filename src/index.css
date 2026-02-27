@@ -1,0 +1,23 @@
+ @import "tailwindcss";
+
+@layer components {
+
+    /* Smooth scale effect for Dashboard Cards */
+    .stat-card-hover {
+        @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+    }
+
+    /* Custom scrollbar for the Main Content area */
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        @apply bg-slate-200 rounded-full;
+    }
+}
+
+/* Base body background to match the design */
+body {
+    @apply bg-[#F0F2F5] antialiased;
+}
