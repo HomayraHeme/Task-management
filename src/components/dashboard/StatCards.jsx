@@ -13,13 +13,13 @@ const StatCards = ({ overview }) => {
 };
 
 const StatCard = ({ label, val, sub, dark }) => (
-    <div className={`p-6 rounded-2xl shadow-sm relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md ${dark ? 'bg-[#1B4332] text-white' : 'bg-white text-slate-900 border border-slate-100'}`}>
-        <p className="text-[10px] font-bold uppercase opacity-60 mb-2">{label}</p>
+    <div className={`p-6 rounded-2xl shadow-sm relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md ${dark ? 'bg-gradient-to-b from-[#1B4332] via-[#276443] to-[#3C7A5C] text-white' : 'bg-white text-slate-900 border border-slate-100'}`}>
+        <p className="text-[10px] font-bold uppercase opacity-60 mb-2 ">{label}</p>
         <p className="text-4xl font-black mb-4">{val}</p>
-        <div className="flex items-center gap-1 opacity-50 text-[10px]">
+        <div className="flex items-center gap-1  text-green-600 text-xs ">
             <CheckSquare size={10} /> {sub}
         </div>
-        <ArrowUpRight className="absolute top-6 right-6 opacity-30" size={18} />
+        <ArrowUpRight className="absolute top-6 right-6  border border-black rounded-full p-1 bg-white text-black" size={24} />
     </div>
 );
 
