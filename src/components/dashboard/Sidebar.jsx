@@ -5,7 +5,7 @@ import { useAuth } from '../../Context/AuthContext';
 const Sidebar = () => {
     const { logout } = useAuth();
     return (
-        <aside className="w-64 bg-[#F8F9FA] rounded-[32px] p-6 m-4 flex flex-col shadow-sm border border-slate-100 hidden lg:flex h-[900px]">
+        <aside className="w-64 bg-[#F8F9FA] rounded-2xl p-6 m-4 flex flex-col shadow-sm border border-slate-100 hidden lg:flex h-[900px]">
             <div className="flex items-center gap-2 mb-10 px-2 font-bold text-xl text-[#1B4332]">
                 <div className="bg-[#1B4332] p-1.5 rounded-lg text-white"><CheckSquare size={18} /></div>
                 Donezo

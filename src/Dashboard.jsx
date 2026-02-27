@@ -34,13 +34,13 @@ const Index = () => {
     }, [user]);
 
     return (
-        <div className="flex min-h-screen bg-white">
+        <div className="flex min-h-screen bg-white rounded-2xl shadow-xl overflow-hidden">
             <Sidebar />
             <div className="flex-1 flex flex-col min-w-0">
                 <Header />
-                <main className="flex-1 p-6 overflow-auto custom-scrollbar">
+                <main className="flex-1 p-6 overflow-auto custom-scrollbar bg-[#F8F9FA] rounded-2xl mt-4 shadow-sm border border-slate-100">
                     {/* Dashboard Title & Buttons */}
-                    <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-start justify-between  ">
                         <div>
                             <h1 className="text-3xl font-bold text-slate-900">Dashboard</h1>
                             <p className="text-slate-400 mt-1 italic">Plan, prioritize, and accomplish your tasks with ease.</p>
