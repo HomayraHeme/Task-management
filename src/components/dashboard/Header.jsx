@@ -14,7 +14,7 @@ const Header = () => {
             <div className="flex items-center gap-4">
                 <HeaderBtn icon={<Mail size={18} />} />
                 <HeaderBtn icon={<Bell size={18} />} />
-                <div className="flex items-center gap-3 bg-white pl-1 pr-4 py-1 rounded-full shadow-sm border border-slate-100 cursor-pointer hover:bg-slate-50 transition-colors">
+                <div className="flex items-center gap-3  pl-1 pr-4 py-1  hover:bg-slate-50 transition-colors">
                     <img src="https://ui-avatars.com/api/?name=Totok+Michael" className="w-8 h-8 rounded-full" alt="User" />
                     <div className="flex flex-col pr-2">
                         <div className="text-[10px] leading-tight font-bold">Totok Michael</div>

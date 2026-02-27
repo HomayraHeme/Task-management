@@ -5,7 +5,7 @@ import { useAuth } from '../../Context/AuthContext';
 const Sidebar = () => {
     const { logout } = useAuth();
     return (
-        <aside className="w-64 bg-[#F8F9FA] rounded-2xl p-6 m-4 flex flex-col shadow-sm border border-slate-100 hidden lg:flex h-[900px]">
+        <aside className="w-64 bg-[#F8F9FA] rounded-2xl p-6 mt-4 mx-4  flex flex-col shadow-sm border border-slate-100 hidden lg:flex h-full">
             <div className="flex items-center gap-2 mb-10 px-2 font-bold text-xl text-[#1B4332]">
                 <div className="bg-[#1B4332] p-1.5 rounded-lg text-white"><CheckSquare size={18} /></div>
                 Donezo
@@ -20,15 +20,17 @@ const Sidebar = () => {
                 <NavItem icon={<Settings size={18} />} label="Settings" />
                 <NavItem icon={<HelpCircle size={18} />} label="Help" />
 
-                {/* Sidebar Bottom Promo Card */}
+               
 
 
                 <button onClick={logout} className="w-full flex items-center gap-3 px-3 py-3 text-slate-400 hover:text-red-500 transition-colors">
                     <LogOut size={18} /> <span className="text-sm font-medium">Logout</span>
                 </button>
             </nav>
-            <div className="mt-auto px-2 mb-6">
-                <div className="relative overflow-hidden bg-gradient-to-br from-[#081C15] to-[#1B4332] p-4 rounded-[24px] text-white">
+
+ {/* Sidebar Bottom Promo Card */}
+            <div className="mt-53 ">
+                <div className="relative overflow-hidden bg-gradient-to-br from-[#081C15] to-[#1B4332] p-4 rounded-2xl text-white">
                     {/* Abstract background shapes */}
                     <div className="absolute top-0 right-0 w-full h-full opacity-20 pointer-events-none">
                         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="scale-150">

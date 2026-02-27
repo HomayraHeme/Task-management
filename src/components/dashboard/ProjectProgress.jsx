@@ -96,11 +96,11 @@ const ProjectProgress = ({ analytics }) => {
                 {/* Legend */}
                 <div className="flex items-center gap-5 mt-5 text-[9px] font-bold text-slate-500 uppercase tracking-wide">
                     <div className="flex items-center gap-1.5">
-                        <span className="w-2.5 h-2.5 rounded-full bg-[#15803D] flex-shrink-0" />
+                        <span className="w-2.5 h-2.5 rounded-full bg-[#28864b] flex-shrink-0" />
                         Completed ({completed})
                     </div>
                     <div className="flex items-center gap-1.5">
-                        <span className="w-2.5 h-2.5 rounded-full bg-[#4ADE80] flex-shrink-0" />
+                        <span className="w-2.5 h-2.5 rounded-full bg-[#085123] flex-shrink-0" />
                         In Progress ({inProgress})
                     </div>
                     <div className="flex items-center gap-1.5">
