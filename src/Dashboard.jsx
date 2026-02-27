@@ -56,11 +56,13 @@ const Index = () => {
                     </div>
 
                     {/* Stat Cards Section */}
-                    <StatCards overview={{ ...data?.overview, totalProjects: products.length }} />
+                   <div className="mt-5">
+                     <StatCards overview={{ ...data?.overview, totalProjects: products.length }} />
+                   </div>
 
 
-                    <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-6 items-start">
-                        <div className="lg:col-span-2 h-[230px]">
+                    <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-4 items-start">
+                        <div className="lg:col-span-2 h-[230px] ">
                             <ProjectAnalytics
                                 analytics={data?.analytics}
                                 className="h-full"
