@@ -40,7 +40,7 @@ const Index = () => {
                 <Header />
                 <main className="flex-1 p-6 overflow-auto custom-scrollbar bg-[#F8F9FA] rounded-2xl mt-4 shadow-sm border border-slate-100">
                     {/* Dashboard Title & Buttons */}
-                    <div className="flex items-start justify-between  ">
+                    <div className="md:flex items-start justify-between grid grid-cols-1 gap-4">
                         <div>
                             <h1 className="text-3xl font-bold text-slate-900">Dashboard</h1>
                             <p className="text-slate-400 mt-1 italic">Plan, prioritize, and accomplish your tasks with ease.</p>
@@ -78,9 +78,9 @@ const Index = () => {
                         </div>
                     </div>
                    
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-6 items-start">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-30 lg:mt-4 items-start ">
                         
-                        <div className="lg:col-span-4 relative -top-[90px] h-[310px] gap-4">
+                        <div className="lg:col-span-5 relative -top-[90px] h-[310px] gap-4">
                             <TeamCollaboration users={data?.users} />
                         </div>
 
