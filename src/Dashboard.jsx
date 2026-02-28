@@ -34,23 +34,27 @@ const Index = () => {
     }, [user]);
 
     return (
-        <div className="flex bg-white rounded-2xl shadow-xl overflow-hidden">
-            <Sidebar />
-            <div className="flex-1 flex flex-col min-w-0">
+        <div className="flex bg-white rounded-2xl shadow-xl overflow-hidden min-h-screen">
+            {/* Sidebar usually hidden on mobile or needs a toggle - assuming standard Sidebar */}
+            <Sidebar className="hidden lg:block" />
+            
+            <div className="flex-1 flex flex-col min-w-0 overflow-y-auto">
                 <Header />
-                <main className="flex-1 px-6 pt-6 pb-4 bg-[#F8F9FA] rounded-2xl mt-4 shadow-sm border border-slate-100">
+                
+                <main className="flex-1 px-4 md:px-6 pt-6 pb-4 bg-[#F8F9FA] rounded-2xl mt-4 shadow-sm border border-slate-100 mx-2 md:mx-4 mb-4">
+                    
                     {/* Dashboard Title & Buttons */}
-                    <div className="md:flex items-start justify-between grid grid-cols-1 gap-4 ">
+                    <div className="flex flex-col sm:flex-row items-start justify-between gap-4">
                         <div>
-                            <h1 className="text-3xl font-bold text-slate-900">Dashboard</h1>
-                            <p className="text-slate-400 mt-1 italic">Plan, prioritize, and accomplish your tasks with ease.</p>
+                            <h1 className="text-2xl md:text-3xl font-bold text-slate-900">Dashboard</h1>
+                            <p className="text-slate-400 mt-1 text-sm md:text-base">Plan, prioritize, and accomplish your tasks with ease.</p>
                         </div>
-                        <div className="flex items-center gap-3">
-                            <button className="flex items-center gap-2 bg-gradient-to-r from-[#1B4332] to-[#276443] text-white px-5 py-2.5 rounded-3xl text-sm font-semibold hover:bg-emerald-900 transition-all shadow-lg shadow-emerald-900/10">
-                                <Plus className="w-4 h-4" /> Add Project
+                        <div className="flex items-center gap-3 w-full sm:w-auto">
+                            <button className="flex-1 sm:flex-none flex items-center justify-center gap-2 bg-gradient-to-r from-[#1B4332] to-[#276443] text-white px-5 py-2.5 rounded-3xl text-sm font-semibold hover:opacity-90 transition-all shadow-lg shadow-emerald-900/10">
+                                <Plus className="w-4 h-4" /> <span className="whitespace-nowrap">Add Project</span>
                             </button>
-                            <button className="flex items-center gap-2 border border-green-600 bg-white text-green-700 px-5 py-2.5 rounded-3xl text-sm font-semibold hover:bg-slate-50 transition-all">
-                                Import Data
+                            <button className="flex-1 sm:flex-none flex items-center justify-center gap-2 border border-green-600 bg-white text-green-700 px-5 py-2.5 rounded-3xl text-sm font-semibold hover:bg-emerald-50 transition-all shadow-sm">
+                                <span className="whitespace-nowrap">Import Data</span>
                             </button>
                         </div>
                     </div>
@@ -60,40 +64,46 @@ const Index = () => {
                         <StatCards overview={{ ...data?.overview, totalProjects: products.length }} />
                     </div>
 
-
-                    <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mt-4 items-start">
-                        <div className="lg:col-span-2 h-[230px] ">
+                    {/* Middle Grid: Analytics, Reminders, Project List */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 items-start">
+                        {/* Project Analytics: Large-e 2 col, Mobile-e auto height */}
+                        <div className="md:col-span-2 lg:h-[230px]">
                             <ProjectAnalytics
                                 analytics={data?.analytics}
                                 className="h-full"
                             />
                         </div>
 
-                        <div className="h-[320px]">
+                        {/* Reminders: Fixed height only on Large */}
+                        <div className="lg:h-[320px]">
                             <Reminders className="h-full" />
                         </div>
 
-                        <div className="lg:col-span-1">
+                        {/* Project List */}
+                        <div className="md:col-span-2 lg:col-span-1">
                             <ProjectList products={products} />
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-4 items-start -mb-[80px]">
-
-                        <div className="lg:col-span-4 relative -top-[90px] h-[310px] gap-4">
+                    {/* Bottom Grid: Team, Progress, Time Tracker */}
+                    {/* 'relative' positioning and negative margins applied ONLY on large devices (lg) */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 mt-4 lg:mt-4 items-start lg:-mb-[80px]">
+                        
+                        <div className="lg:col-span-4 lg:relative lg:-top-[90px] lg:h-[310px]">
                             <TeamCollaboration users={data?.users} />
                         </div>
 
-
-                        <div className="lg:col-span-5 relative -top-[90px] h-[310px] gap-4">
+                        <div className="lg:col-span-5 lg:relative lg:-top-[90px] lg:h-[310px]">
                             <ProjectProgress analytics={data?.analytics} />
                         </div>
 
-
-                        <div className="lg:col-span-3">
+                        <div className="md:col-span-2 lg:col-span-3">
                             <TimeTracker />
                         </div>
                     </div>
+
+                    {/* Spacer for mobile to prevent content clipping due to negative margins on large screens */}
+                    <div className="h-10 lg:hidden"></div>
                 </main>
             </div>
         </div>

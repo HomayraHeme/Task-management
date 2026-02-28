@@ -13,8 +13,7 @@ const ProjectProgress = ({ analytics }) => {
     const inProgressPercent = total > 0 ? (inProgress / total) * progress : 0;
     const pendingPercent = 100 - progress;
 
-    // SVG semi-circle arc math
-    // Center: (110, 100), Radius: 90
+     
     const cx = 110, cy = 100, r = 90;
     const semiCircumference = Math.PI * r;
 
@@ -38,7 +37,7 @@ const ProjectProgress = ({ analytics }) => {
                         <defs>
                             <pattern id="stripes" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
                                 <rect width="3" height="6" fill="#94A3B8" />
-                                <rect x="3" width="3" height="6" fill="#CBD5E1" />
+                                <rect x="3" width="3" height="6" fill="white" />
                             </pattern>
                         </defs>
 
@@ -96,18 +95,18 @@ const ProjectProgress = ({ analytics }) => {
                 {/* Legend */}
                 <div className="flex items-center gap-5 mt-5 text-[9px] font-bold text-slate-500 uppercase tracking-wide">
                     <div className="flex items-center gap-1.5">
-                        <span className="w-2.5 h-2.5 rounded-full bg-[#28864b] flex-shrink-0" />
-                        Completed ({completed})
+                        <span className="w-3.5 h-3.5 rounded-full bg-[#28864b] flex-shrink-0" />
+                        Completed  
                     </div>
                     <div className="flex items-center gap-1.5">
-                        <span className="w-2.5 h-2.5 rounded-full bg-[#085123] flex-shrink-0" />
-                        In Progress ({inProgress})
+                        <span className="w-3.5 h-3.5 rounded-full bg-[#085123] flex-shrink-0" />
+                        In Progress  
                     </div>
                     <div className="flex items-center gap-1.5">
-                        <span className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{
-                            background: 'repeating-linear-gradient(45deg,#94A3B8 0,#94A3B8 2px,#CBD5E1 2px,#CBD5E1 4px)'
+                        <span className="w-3.5 h-3.5 rounded-full flex-shrink-0" style={{
+                            background: 'repeating-linear-gradient(135deg,#94A3B8 0,#94A3B8 2px,white 2px,white 4px)'
                         }} />
-                        Pending ({pending})
+                        Pending  
                     </div>
                 </div>
             </div>
