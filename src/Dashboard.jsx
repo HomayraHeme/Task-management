@@ -85,8 +85,7 @@ const Index = () => {
                         </div>
                     </div>
 
-                    {/* Bottom Grid: Team, Progress, Time Tracker */}
-                    {/* 'relative' positioning and negative margins applied ONLY on large devices (lg) */}
+                    
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 mt-4 lg:mt-4 items-start lg:-mb-[80px]">
                         
                         <div className="lg:col-span-4 lg:relative lg:-top-[90px] lg:h-[310px]">
@@ -102,7 +101,7 @@ const Index = () => {
                         </div>
                     </div>
 
-                    {/* Spacer for mobile to prevent content clipping due to negative margins on large screens */}
+                    
                     <div className="h-10 lg:hidden"></div>
                 </main>
             </div>
