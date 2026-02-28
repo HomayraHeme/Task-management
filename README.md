@@ -5,15 +5,21 @@
 ## Project Overview
 
 Login with API authentication
+
 Protected Dashboard (only after login)
+
 Fetch and display data from REST API
+
 Responsive and modern UI
 
 ## Tech Stack
 
 React (Vite)
+
 Tailwind CSS
+
 React Router DOM
+
 Axios / Fetch API
 
 ## Deployed on Vercel or Netlify
