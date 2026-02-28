@@ -4,23 +4,23 @@
 
 ## Project Overview
 
-Login with API authentication
+1.Login with API authentication
 
-Protected Dashboard (only after login)
+2.Protected Dashboard (only after login)
 
-Fetch and display data from REST API
+3.Fetch and display data from REST API
 
-Responsive and modern UI
+4.Responsive and modern UI
 
 ## Tech Stack
 
-React (Vite)
+1.React (Vite)
 
-Tailwind CSS
+2.Tailwind CSS
 
-React Router DOM
+3.React Router 
 
-Axios / Fetch API
+4.Axios 
 
 ## Deployed on Vercel or Netlify
 
