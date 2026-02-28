@@ -2,6 +2,7 @@
 import { LayoutDashboard, CheckSquare, Calendar, BarChart2, Users, Settings, HelpCircle, LogOut } from 'lucide-react';
 import { useAuth } from '../../Context/AuthContext';
 import logo from "../../assets/donezo.png";
+import app from "../../assets/app.png";
 const Sidebar = () => {
     const { logout } = useAuth();
     return (
@@ -30,29 +31,36 @@ const Sidebar = () => {
             </nav>
 
             {/* Sidebar Bottom Promo Card */}
-            <div className="mt-30 ">
-                <div className="relative overflow-hidden bg-gradient-to-br from-[#081C15] to-[#1B4332] p-4 rounded-2xl text-white">
+          
 
-
-                    <div className="relative z-10">
-                        {/* Small Icon/Logo */}
-                        <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center mb-3">
-                            <div className="w-2 h-2 bg-white rounded-full" />
-                        </div>
-
-                        <h4 className="text-sm font-bold leading-tight mb-1">
-                            Download our<br />Mobile App
-                        </h4>
-                        <p className="text-[10px] text-white/60 mb-4 font-medium">
-                            Get easy in another way
-                        </p>
-
-                        <button className="w-full bg-[#52B788] hover:bg-[#40916c] text-white py-2 rounded-full text-[11px] font-bold transition-all">
-                            Download
-                        </button>
-                    </div>
-                </div>
+<div className="mt-30">
+    <div 
+        className="relative overflow-hidden p-4 rounded-2xl text-white bg-gradient-to-br from-[#081C15] to-[#1B4332]"
+    >
+       
+        <div 
+            className="absolute inset-0 z-0 opacity-20 bg-cover bg-center pointer-events-none"
+            style={{ backgroundImage: `url(${app})` }}
+        />
+        <div className="relative z-10">
+            
+            <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center mb-3">
+                <div className="w-2 h-2 bg-white rounded-full" />
             </div>
+
+            <h4 className="text-sm font-bold leading-tight mb-1">
+                Download our<br />Mobile App
+            </h4>
+            <p className="text-[10px] text-white/60 mb-4 font-medium">
+                Get easy in another way
+            </p>
+
+            <button className="w-full bg-emerald-800 hover:bg-[#40916c] text-white py-2 rounded-full text-[11px] font-bold transition-all shadow-md active:scale-95">
+                Download
+            </button>
+        </div>
+    </div>
+</div>
         </aside>
     );
 };
