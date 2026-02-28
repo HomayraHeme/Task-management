@@ -41,7 +41,7 @@ const Index = () => {
             <div className="flex-1 flex flex-col min-w-0 overflow-y-auto">
                 <Header />
                 
-                <main className="flex-1 px-4 md:px-6 pt-6 pb-4 bg-[#F8F9FA] rounded-2xl mt-4 shadow-sm border border-slate-100 mx-2 md:mx-4 mb-4">
+                <main className="flex-1 px-4 md:px-4 pt-6 pb-4 bg-[#F8F9FA] rounded-2xl mt-4 shadow-sm border border-slate-100 mx-2 md:mx-1 mb-4">
                     
                     {/* Dashboard Title & Buttons */}
                     <div className="flex flex-col sm:flex-row items-start justify-between gap-4">
